@@ -38,7 +38,10 @@ def remove_pet_by_name(shop, pet_to_remove):
 def add_pet_to_stock(shop, new_pet):
     shop["pets"].append(new_pet)
 
-def 
+def get_customer_cash(customer_list):
+    for customer in customer_list:
+        return customer_list["cash"]
+    
 
 
 
