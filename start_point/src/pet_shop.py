@@ -39,13 +39,29 @@ def add_pet_to_stock(shop, new_pet):
     shop["pets"].append(new_pet)
 
 def get_customer_cash(customer_list):
-    for customer in customer_list:
-        return customer_list["cash"]
+    return customer_list["cash"]
 
 def remove_customer_cash(customer, amount):
     customer["cash"] -= amount
     
-def get_customer_pet_count():
+def get_customer_pet_count(customer):
+    return len(customer["pets"])
+
+def add_pet_to_customer(customer, new_pet):
+    customer["pets"].append(new_pet)
+
+#LANDMARK MOMENT! I GOT THIS FAR!
+
+def customer_can_afford_pet(customer, pet):
+    if customer["cash"] >= pet["price"]:
+        return True
+    else:
+        return False
+
+
+
+
+    
     
 
 
