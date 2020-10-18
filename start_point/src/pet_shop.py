@@ -59,15 +59,13 @@ def customer_can_afford_pet(customer, pet):
         return False
 
 def sell_pet_to_customer(shop, pet, customer):
-    if customer_can_afford_pet(customer, pet) == True:
+    if pet != None and customer_can_afford_pet(customer, pet) == True:
         add_pet_to_customer(customer, pet)
         remove_pet_by_name(shop, pet)
         increase_pets_sold(shop, 1)
         remove_customer_cash(customer, pet["price"])
         add_or_remove_cash(shop, pet["price"])
     
-
-
 
 
 
